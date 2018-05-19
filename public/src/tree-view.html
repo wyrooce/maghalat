@@ -1,0 +1,6 @@
+<template>
+<input type="button" value="باز کردن همه" class="btn" click.trigger="openAll()">
+<input type="button" value="بسته کردن همه" class="btn" click.trigger="closeAll()">
+    <require from='./tree-node'></require>
+    <tree-node repeat.for="node of nodes" current.bind="node"></tree-node>
+</template>

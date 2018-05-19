@@ -1,0 +1,34 @@
+<template>
+  <ul show.bind="current.visible">
+    <li>
+      <div style="border: #6eb1d0 1px solid" class="row" click.trigger="current.toggleNode()">
+
+        <div class="column_4">
+          <span css="padding-right: ${myFunc(current)}px;">
+             <span if.bind="current.hasChildren()" class="${current.icon}">
+             </span>
+            ${current.name} </span>
+
+        </div>
+        <div class="column_1">
+          <span> ${current.total}</span>
+        </div>
+        <div class="column_1">
+          <span> ${current.total}</span>
+        </div>
+        <div class="column_1">
+          <span> ${current.total}</span>
+        </div>
+        <div class="column_1">
+          <span> ${current.total}</span>
+        </div>
+        <div class="column_1">
+          <span> ${current.total}</span>
+        </div>
+      </div>
+
+      <tree-node repeat.for="node of current.children" current.bind="node"></tree-node>
+
+    </li>
+  </ul>
+</template>

@@ -1,0 +1,14 @@
+<template>
+
+
+  <nav if.bind="current">
+    hdsf sdkf sdkfhs dkfhdkfj hsdkjfhksdjfhksd
+    <ul>
+      <li repeat.for="row of router.navigation">
+        <a href.bind="row.href">${row.title}</a>
+      </li>
+    </ul>
+        <input type="button" click.trigger="logout()" value="خروج"/>    
+  </nav>
+  <router-view></router-view>
+</template>
